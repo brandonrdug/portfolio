@@ -1,0 +1,11 @@
+:root {
+	--font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
+	--intro-palette-background: #222020;
+	--intro-palette-keyword: #6a7f5b;
+	--intro-palette-highlight: #4f433d;
+	--intro-palette-text-primary: #e8e6e5;
+	--intro-palette-text-secondary: #beb9b4;
+	--intro-palette-text-lightcolor: #d8cbbe;
+	--intro-palette-text-tooltip: #39332f;
+}

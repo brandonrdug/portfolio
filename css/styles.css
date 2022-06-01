@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "reset.css";
+@import "vars.css";
+@import "scroll.css";
+
+body {
+	font-family: Nunito, -apple-system, BlinkMacSystemFont, "Open Sans",
+		"Helvetica Neue", sans-serif;
+	background-color: var(--intro-palette-background);
+}
+
+::selection {
+	background-color: var(--intro-palette-highlight);
+}
+
+.code {
+	font-family: var(--font-mono);
+	color: var(--intro-palette-text-secondary);
+}
+
+.keyword {
+	color: var(--intro-palette-keyword);
+}
+
+.var {
+	color: var(--intro-palette-text-lightcolor);
+}
+
+.bracket-top {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+}
+
+.bracket-bottom {
+	position: absolute;
+	top: calc(100vh - 4rem);
+	left: 2rem;
+}
+
+.tooltip {
+	position: absolute;
+	visibility: hidden;
+	padding: .5rem;
+	background-color: var(--intro-palette-text-secondary);
+	opacity: 0;
+	color: var(--intro-palette-text-tooltip);
+	font-weight: bold;
+	transition: opacity .3s ease;
+}
+
+.me-container {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 50vw;
+	top: 40vh;
+	transform: translate(-50%, -50%);
+	width: 100vw;
+	padding: 0 2rem 0;
+	gap: 2rem;
+	color: var(--intro-palette-text-primary);
+}
+
+@media screen and (min-width: 768px) {
+	.me-container {
+		padding: 0 12rem 0
+	}
+}
+
+.me-intro {
+	margin-left: 1.5rem;
+}
+
+.me-intro > header {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.me-name {
+	color: var(--intro-palette-text-lightcolor);
+}
+
+.me-title {
+	margin-top: .2rem;
+	font-size: 1.2rem;
+	color: var(--intro-palette-text-secondary);
+}
+
+.me-intro > nav {
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+	margin-top: .65rem;
+	padding: 0 .15rem 0;
+}
+
+.me-intro > nav > div {
+	width: fit-content;
+}
+
+.me-ref {
+	fill: var(--intro-palette-text-primary);
+	transition: fill 0.25s ease;
+}
+
+.me-ref:hover, .me-ref:active {
+	fill: var(--intro-palette-text-secondary)
+}
+
+.me-ref:hover .tooltip {
+	margin-top: .15rem;
+	visibility: visible;
+	opacity: 1;
+}
+
+.me-about {
+	max-width: 22rem;
+	margin-left: 1.5;
+	align-self: flex-end;
+	font-size: 1.05rem;
+}
+
+@media screen and (min-width: 768px) {
+	.me-about {
+		margin-left: 0;
+		margin-right: 4rem;
+	}
+}
